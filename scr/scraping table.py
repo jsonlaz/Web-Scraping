@@ -53,4 +53,4 @@ for row in column_data[1:]:
     df.loc[length] = individual_row_data
 
 # Save to CSV
-df.to_csv(r'C:\Users\Aterbruket\OneDrive\Documents\Raw Dataset\companies.csv', index = False)
+df.to_csv(r'C:\Users\Raw Dataset\companies.csv', index = False)
