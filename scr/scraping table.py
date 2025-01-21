@@ -16,6 +16,7 @@ soup.find_all('table')
 
 soup.find_all('table')[0]
 
+# Locate the table
 table = soup.find_all('table', class_ = "wikitable sortable")[0]
 
 print(table)
@@ -30,6 +31,7 @@ world_table_title = [title.text.strip() for title in world_title]
 
 print(world_table_title)
 
+# Use Pandas to read the table into a DataFrame
 import pandas as pd
 
 df = pd.DataFrame(columns = world_table_title)
@@ -50,4 +52,5 @@ for row in column_data[1:]:
     length = len(df)
     df.loc[length] = individual_row_data
 
+# Save to CSV
 df.to_csv(r'C:\Users\Aterbruket\OneDrive\Documents\Raw Dataset\companies.csv', index = False)
